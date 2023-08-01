@@ -94,7 +94,7 @@ $locations = Get-AzLocation | Where-Object {
 }
 $max_index = $locations.Count - 1
 $rand = (0..$max_index) | Get-Random
-$Region = $locations.Get($rand).Location
+$Region = "northeurope"
 
 # Test for subscription Azure SQL capacity constraints in randomly selected regions
 # (for some subsription types, quotas are adjusted dynamically based on capacity)
