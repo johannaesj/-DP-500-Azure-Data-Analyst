@@ -127,7 +127,7 @@ $Region = $locations.Get($rand).Location
     }
 }
 Write-Host "Creating $resourceGroupName resource group in $Region ..."
-New-AzResourceGroup -Name $resourceGroupName -Location $Region | Out-Null
+New-AzResourceGroup -Name $resourceGroupName -Location $Region -Tag @{costcenter=844; owner="IM-analytics"} | Out-Null
 
 # Create Synapse workspace
 $synapseWorkspace = "synapse$suffix"
